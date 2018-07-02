@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Security-Policy" content="default-src * gap: ws: https://ssl.gstatic.com;style-src * 'unsafe-inline' 'self' data: blob:;script-src * 'unsafe-inline' 'unsafe-eval' data: blob:;img-src * data: 'unsafe-inline' 'self' content:;media-src mediastream;">
+        <meta charset="utf-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" >
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css" >
+        <link rel="stylesheet" type="text/css" href="css/format.css">
+        <title>Filmes</title>
+    </head>
+    <body>
+ 
+        <header class="top">
+            <span class="glyphicon glyphicon-film" aria-hidden="true"></span><img src="img/logo-small.png" alt="Logo Filmes">
+        </header>
+        <div role="tabpanel" class="abasDet">
+            <ul class="nav nav-tabs tabContato" role="tablist">
+                <li class="active" role="presentation">
+                    <a role="tab" data-toggle="tab" aria-controls="aba1" href="#aba1" aria-expanded="true">Adicionar</a>
+                </li>
+                <li role="presentation">
+                    <a role="tab" data-toggle="tab" aria-controls="aba2" href="#aba2" aria-expanded="false" onclick="show();">Lista</a>
+                </li>
+            </ul>
+
+            <div class="tab-content">
+                <div id="aba1" class="tab-pane active" role="tabpanel">
+                    <h2>Filme</h2>
+                    <form class="formulario">
+                        <div class="form-group">
+                            <label for="titulo">Título</label>
+                            <input type="text" placeholder="Título" class="form-control" id="titulo">
+                        </div>
+                       <div class="form-group">
+                            <label for="editora">Editora</label>
+                            <input type="text" placeholder="Editora" class="form-control" id="editora">
+                        </div>
+                        <div class="form-group">
+                            <label for="ano">Ano</label>
+                            <input type="number" placeholder="Ano" class="form-control" id="ano">
+                        </div>
+                        <div class="view">
+                            <label for="camera">Foto do Livro</label>
+                            <button id="get-picture">Tirar uma foto</button>
+                            <button id="file-picker">Escolher da galeria</button>
+                        <div id="photo"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="sinopse">Sinopse</label>
+                            <textarea name="sinopse" class="form-control" id="sinopse"></textarea>
+                        </div>
+                        <button type="button" id="start" class="btn btn-default" onclick="adiciona();">Adicionar</button>
+                    </form>
+                </div><!-- fim aba 1 -->
+
+                <div id="aba2" class="tab-pane" role="tabpanel">
+                    <h2>Lista</h2>
+
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    </div>
+
+
+
+                </div><!-- fim aba 2 -->
+
+            </div><!-- FIM TAB CONTENT -->
+            
+<style type="text/css">
+    #photo {
+        height: 400px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50%;
+    }
+    
+    .shake {
+        animation: shake 1s 0 3;
+        background: #cc0000;
+    }
+    
+    @keyframes shake {
+        5%, 45% {
+            transform: translateX(-1px);
+        }
+
+        10%, 40% {
+            transform: translateX(2px);
+        }
+
+        15%, 25%, 35% {
+            transform: translateX(-4px);
+        }
+
+        20%, 30% {
+            transform: translateX(4px);
+        }
+        
+        50%, 100% {
+            transform: translateX(0);
+        }
+    }
+</style>
+
+<div data-script="scripts/vibration.js"></div>
+        </div><!-- FIM ABAS DET -->
+
+
+        <script type="text/javascript" src="cordova.js"></script>     
+        <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+        <script type="text/javascript" src="js/camera.js"></script>
+    </body>
+</html>

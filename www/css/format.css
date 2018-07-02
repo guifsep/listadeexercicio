@@ -1,0 +1,28 @@
+body { margin: 0;}
+img, picture, video, embed, iframe {
+    max-width: 100%;
+}
+
+h2 { font-size: 25px; margin-bottom: 30px;}
+a:focus, a:hover { outline: none; text-decoration: none;}
+.top { background: #2F58FF; padding: 15px;}
+.top span { color: #fff; font-size: 30px; margin-right: 10px; vertical-align: middle;}
+.tab-content { padding: 30px 15px;}
+.tabContato li { background: #2F58FF; width: 50%; text-align: center;}
+
+.nav-tabs { border: 0;}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover { background: #2F58FF; border: 0; border-bottom: 6px solid #6790ff; color: #fff;}
+.tabContato li a { border: 0; border-bottom: 6px solid #2F58FF; color: #fff;}
+.tabContato li a:hover { background: #2F58FF; border: 0; border-bottom: 6px solid #2F58FF;} 
+.nav-tabs > li > a { margin: 0; text-transform: uppercase;}
+
+.formulario { max-width: 480px; width: 100%;}
+.formulario label { font-size: 16px;}
+.formulario input { font-size: 16px; height: 44px;}
+.container { text-align: center;}
+.botaoCamera { background: #4dbecf; border: 0; border-radius: 4px; clear: both; color: #fff; margin-bottom: 20px; padding: 10px;}
+
+.panel-default > .panel-heading { padding: 0;}
+.panel-title > a { display: block; font-size: 17px; padding: 14px 15px; position: relative; padding-right: 50px;}
+.panel-title > a span { font-size: 18px; position: absolute; right: 15px; top: 16px;}
+.panel-collapse p { font-size: 16px;}
